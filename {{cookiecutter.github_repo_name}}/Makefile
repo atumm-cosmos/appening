@@ -17,6 +17,14 @@ compile: install
 run-bin: compile
 	./dist/{{cookiecutter.project_slug}}
 
+system: compile
+	cp ./dist/{{cookiecutter.project_slug}} ~/.local/bin/{{cookiecutter.project_slug}}
+	mkdir -p ~/.local/share/{{cookiecutter.project_slug}}
+	cp {{cookiecutter.project_slug}}.png ~/.local/share/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.png
+	sed -i "s@~@$HOME@g" {{cookiecutter.project_slug}}.desktop
+	cp {{cookiecutter.project_slug}}.desktop ~/.local/share/applications/
+
+
 shell:
 	eval $(pdm venv activate)
 

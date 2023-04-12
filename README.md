@@ -9,44 +9,92 @@ Supported platforms:
 [x] Linux
 
 ## Requirements
+
 1. python3.9
 2. make
 3. PDM
-```bash
-pip install -U pdm
-```
+
 ## Features
 
 - PDM managed
 - Uses PySide6 for rendering
-- Self-contained cookiejar
+- Persistent cookiejar
+- Support for app icon
+- Installable .desktop file
 
+Only **linux** is supported
 
 ## Quickstart
 
-#### Using Cruft
+### Dependencies
 
-    pip install -U cruft
+#### 1. Install make
 
-Generate an app package project:
+```bash
+sudo apt-get install make
+```
 
-    cruft create git@github.com:atumm-ra/appening.git
+#### 2. Install Python dependencies
 
-### Using Cookiecutter
+- pdm
+- cookiecutter
 
-Install the latest Cookiecutter if you haven't installed it yet (this
-requires Cookiecutter 1.4.0 or higher):
+Install dependencies via make
 
-    pip install -U cookiecutter
+```bash
+make install-deps
+```
 
-Generate a Python package project:
+#### 3. download the app icon
 
-    cookiecutter gh:atumm-ra/appening
+```bash
+curl -o /tmp/app.png https://example.com/image.png
+```
 
-Now after following the interactive console, you'll end up with a project that uses PySide6 to embed the web application you want
+#### 4. Create the app
 
-### Running the produced desktop application
+cookiecutter gh:atumm-ra/appening
 
-- to be written....
+You'll be asked to fill in the parameters, most defaults would do, but you need to fill in the following (&examples):
 
+I'm using formaviva as an example, this app is an independent creation that has nothing to do with formaviva
+
+```bash
+webapp_url: https://formaviva.com
+app_name: Formaviva Desktop
+```
+
+Optional but recommended
+
+```bash
+icon_path: /tmp/app.png
+```
+
+Now after following the interactive console, you'll end up with a project that uses PySide6 to embed the web application
+you want
+
+
+#### 5. Install the app
+
+```bash
+cd formaviva-desktop
+make system
+```
+
+What happens here is that it initializes a virtual environment, installs the dependencies (PySide and pyinstaller)
+compile a binary of the application, and assembles the .desktop file and copies it to the ~/.local/bin and ~
+/.local/share/applications/app.desktop
+
+
+
+### To Do
+
+Feel free to open a PR with any of the following, if there isn't one already.
+
+- [ ] Support flatpak
+- [ ] host a flatpak repository for all apps created with appening
+- [ ] Support Mac OS X
+
+
+Cheers!
 

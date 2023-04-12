@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import shutil
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -17,3 +18,5 @@ if __name__ == '__main__':
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
 
+    if len('{{ cookiecutter.icon_path }}') > 0:
+        shutil.copyfile('{{ cookiecutter.icon_path }}', './{{ cookiecutter.project_slug }}.png')

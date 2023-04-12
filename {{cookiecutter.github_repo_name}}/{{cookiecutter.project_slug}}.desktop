@@ -5,7 +5,8 @@ Type=Application
 Name={{cookiecutter.project_name}}
 Comment={{cookiecutter.project_short_description}}
 Categories=AudioVideo;Music;
+Icon=~/.local/share/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.png
 
-Icon=appening
-Exec=appening
+
+Exec=~/.local/bin/{{cookiecutter.project_slug}}
 Terminal=false

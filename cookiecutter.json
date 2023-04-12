@@ -1,5 +1,6 @@
 {
     "webapp_url": "https://atumm.org",
+    "icon_path": "/tmp/app.png",
     "project_name": "Appening",
     "project_short_description": "{{ cookiecutter.project_name }}, Your favorite desktop app!",
     "project_long_description": "{{ cookiecutter.project_name }}, Your favorite desktop app!",
@@ -23,7 +24,7 @@
         "ISC license",
         "Apache Software License 2.0",
         "GNU General Public License v3",
-        "Not open source"
+        "Proprietary"
     ],
     "github_default_branch": [
         "master"
