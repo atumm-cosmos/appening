@@ -1,0 +1,29 @@
+app-id: {{cookiecutter.app_id}}
+runtime: org.kde.Platform
+runtime-version: '6.3'
+sdk: org.kde.Sdk
+base: io.qt.qtwebengine.BaseApp
+base-version: '6.3'
+command: /app/bin/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}
+finish-args:
+    - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
+    - --env=QTWEBENGINE_RESOURCES_PATH=/app/resources
+    - --device=all
+    - --share=ipc
+    - --share=network
+    - --socket=fallback-x11
+    - --socket=pulseaudio
+    - --socket=wayland
+cleanup-commands:
+    - /app/cleanup-BaseApp.sh
+    - rm -rf /app/appening
+    - rm -f /app/bin/appening/libstdc++.so.6 /app/bin/appening/libicuuc.so.56
+modules:
+    -   name: appening
+        buildsystem: simple
+        build-commands:
+            - sleep 1
+            - cp -r {{cookiecutter.project_slug}}/ /app/bin/
+        sources:
+            -   type: dir
+                path: dist

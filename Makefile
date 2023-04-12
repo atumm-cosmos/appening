@@ -18,7 +18,8 @@ replay: BAKE_OPTIONS=--replay
 replay: watch
 	;
 
-
+install-deps:
+	pip install -U pdm cookiecutter
 
 run: bake
 	cd appening && \

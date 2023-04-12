@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>{{cookiecutter.app_id}}</id>
+
+  <name>{{cookiecutter.project_name}}</name>
+  <summary>{{cookiecutter.project_short_description}}</summary>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+
+  <description>
+    <p>
+      {{cookiecutter.project_long_description}}
+    </p>
+  </description>
+
+  <launchable type="desktop-id">{{cookiecutter.app_id}}</launchable>
+  <screenshots>
+{% if cookiecutter.app_screenshot_1|length > 0  -%}
+    <screenshot type="default">
+      <image>{{cookiecutter.app_screenshot_1}}</image>
+    </screenshot>
+{% endif %}
+{% if cookiecutter.app_screenshot_2|length > 0  -%}
+    <screenshot>
+      <image>{{cookiecutter.app_screenshot_2}}</image>
+    </screenshot>
+{% endif %}
+{% if cookiecutter.app_screenshot_3|length > 0  -%}
+    <screenshot>
+      <image>{{cookiecutter.app_screenshot_3}}</image>
+    </screenshot>
+{% endif %}
+  </screenshots>
+</component>

@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import (QApplication)
 
-from appening.appening import MainWindow
+from {{cookiecutter.project_slug}}.{{cookiecutter.project_slug}} import MainWindow
 
 app = QApplication(sys.argv)
 
