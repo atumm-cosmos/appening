@@ -6,7 +6,9 @@
 In a nutshell this creates the source code for a python app that can be installed on any linux flavor
 
 Supported platforms:
+
 [x] Linux
+[ ] Mac OS X
 
 ## Requirements
 
@@ -22,7 +24,8 @@ Supported platforms:
 - Support for app icon
 - Installable .desktop file
 
-Only **linux** is supported
+Only **linux** is supported as of now, can be expanded to support macOS
+
 
 ## Quickstart
 
@@ -85,7 +88,13 @@ What happens here is that it initializes a virtual environment, installs the dep
 compile a binary of the application, and assembles the .desktop file and copies it to the ~/.local/bin and ~
 /.local/share/applications/app.desktop
 
+#### 6. Rebuild GTK Icon Cache (optional)
 
+- Resolves when the app icon is shown as unknown/question mark
+
+```
+sudo gtk-update-icon-cache /usr/share/icons/hicolor
+```
 
 ### To Do
 
