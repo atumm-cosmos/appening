@@ -22,20 +22,5 @@
 
   <launchable type="desktop-id">{{cookiecutter.app_id}}</launchable>
   <screenshots>
-{% if cookiecutter.app_screenshot_1|length > 0  -%}
-    <screenshot type="default">
-      <image>{{cookiecutter.app_screenshot_1}}</image>
-    </screenshot>
-{% endif %}
-{% if cookiecutter.app_screenshot_2|length > 0  -%}
-    <screenshot>
-      <image>{{cookiecutter.app_screenshot_2}}</image>
-    </screenshot>
-{% endif %}
-{% if cookiecutter.app_screenshot_3|length > 0  -%}
-    <screenshot>
-      <image>{{cookiecutter.app_screenshot_3}}</image>
-    </screenshot>
-{% endif %}
   </screenshots>
 </component>
