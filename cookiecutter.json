@@ -1,15 +1,12 @@
 {
-    "webapp_url": "https://atumm.org",
+    "webapp_url": "",
+    "project_name": "",
     "icon_path": "/tmp/app.png",
-    "project_name": "Appening",
     "project_short_description": "{{ cookiecutter.project_name }}, Your favorite desktop app!",
     "project_long_description": "{{ cookiecutter.project_name }}, Your favorite desktop app!",
     "github_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_slug": "{{ cookiecutter.github_repo_name.lower().replace(' ', '_').replace('-', '_') }}",
     "app_id": "org.atumm.{{ cookiecutter.project_slug}}",
-    "app_screenshot_1": "",
-    "app_screenshot_2": "",
-    "app_screenshot_3": "",
     "full_name": "First Last",
     "email": "admin@atumm.org",
     "github_username": "username",
@@ -18,17 +15,8 @@
     "use_pytest": "n",
     "add_pyup_badge": "n",
     "create_author_file": "n",
-    "open_source_license": [
-        "MIT license",
-        "BSD license",
-        "ISC license",
-        "Apache Software License 2.0",
-        "GNU General Public License v3",
-        "Proprietary"
-    ],
-    "github_default_branch": [
-        "master"
-    ],
+    "open_source_license": "MIT license",
+    "github_default_branch": "master",
     "_copy_without_render": [
         ".github/workflows/*.yml",
         "docs/overrides/main.html"
