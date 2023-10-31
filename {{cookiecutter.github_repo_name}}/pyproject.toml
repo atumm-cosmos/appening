@@ -28,9 +28,9 @@ dev = [
 ]
 
 [project.urls]
-Documentation = 'https://github.com/omars-code/appening#readme'
-Issues = 'https://github.com/omars-code/appening/issues'
-Source = 'https://github.com/omars-code/appening'
+Documentation = 'https://github.com/omars-code/appi#readme'
+Issues = 'https://github.com/omars-code/appi/issues'
+Source = 'https://github.com/omars-code/appi'
 
 
 [tool.coverage.run]

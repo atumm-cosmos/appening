@@ -1,5 +1,5 @@
 [project]
-name = 'appening'
+name = 'appi'
 dynamic = ['version']
 description = ''
 authors = [
@@ -16,9 +16,9 @@ dev = [
 ]
 
 [project.urls]
-Documentation = 'https://github.com/atumm-ra/appening#readme'
-Issues = 'https://github.com/atumm-ra/appening/issues'
-Source = 'https://github.com/atumm-ra/appening'
+Documentation = 'https://github.com/atumm-ra/appi#readme'
+Issues = 'https://github.com/atumm-ra/appi/issues'
+Source = 'https://github.com/atumm-ra/appi'
 
 [build-system]
 requires = ['pdm-pep517']

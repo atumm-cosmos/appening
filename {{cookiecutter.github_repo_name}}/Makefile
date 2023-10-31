@@ -6,13 +6,13 @@ $(eval $(TARGET_ARGS):;@:)
 
 run:
 	pdm config python.use_venv true && \
-	pdm install && pdm run -v appening
+	pdm install && pdm run -v appi
 
 install:
 	pdm install
 
 compile: install
-	pdm run pyinstaller --collect-all appening -n {{cookiecutter.project_slug}} --onefile {{cookiecutter.project_slug}}/main.py
+	pdm run pyinstaller --collect-all appi -n {{cookiecutter.project_slug}} --onefile {{cookiecutter.project_slug}}/main.py
 
 run-bin: compile
 	./dist/{{cookiecutter.project_slug}}
@@ -21,7 +21,7 @@ system: compile
 	cp ./dist/{{cookiecutter.project_slug}} ~/.local/bin/{{cookiecutter.project_slug}}
 	mkdir -p ~/.local/share/{{cookiecutter.project_slug}}
 	cp {{cookiecutter.project_slug}}.png ~/.local/share/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.png
-	sed -i "s@~@$HOME@g" {{cookiecutter.project_slug}}.desktop
+	sed -i "s|HOME_PATH|${HOME}|g" {{cookiecutter.project_slug}}.desktop
 	cp {{cookiecutter.project_slug}}.desktop ~/.local/share/applications/
 
 

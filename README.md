@@ -1,4 +1,4 @@
-# Appening - Your favorite DIY desktop app creator!
+# appi - Your favorite DIY desktop app creator!
 
 [![image](https://github.com/giswqs/pypackage/workflows/build/badge.svg)](https://github.com/giswqs/pypackage/actions?query=workflow%3Abuild)
 [![image](https://github.com/giswqs/pypackage/workflows/docs/badge.svg)](https://giswqs.github.io/pypackage)
@@ -6,7 +6,9 @@
 In a nutshell this creates the source code for a python app that can be installed on any linux flavor
 
 Supported platforms:
+
 [x] Linux
+[ ] Mac OS X
 
 ## Requirements
 
@@ -22,7 +24,8 @@ Supported platforms:
 - Support for app icon
 - Installable .desktop file
 
-Only **linux** is supported
+Only **linux** is supported as of now, can be expanded to support macOS
+
 
 ## Quickstart
 
@@ -53,7 +56,7 @@ curl -o /tmp/app.png https://example.com/image.png
 
 #### 4. Create the app
 
-cookiecutter gh:atumm-ra/appening
+cookiecutter gh:atumm-ra/appi
 
 You'll be asked to fill in the parameters, most defaults would do, but you need to fill in the following (&examples):
 
@@ -85,14 +88,20 @@ What happens here is that it initializes a virtual environment, installs the dep
 compile a binary of the application, and assembles the .desktop file and copies it to the ~/.local/bin and ~
 /.local/share/applications/app.desktop
 
+#### 6. Rebuild GTK Icon Cache (optional)
 
+- Resolves when the app icon is shown as unknown/question mark
+
+```
+sudo gtk-update-icon-cache /usr/share/icons/hicolor
+```
 
 ### To Do
 
 Feel free to open a PR with any of the following, if there isn't one already.
 
 - [ ] Support flatpak
-- [ ] host a flatpak repository for all apps created with appening
+- [ ] host a flatpak repository for all apps created with appi
 - [ ] Support Mac OS X
 
 
