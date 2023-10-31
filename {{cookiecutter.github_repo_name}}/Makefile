@@ -6,13 +6,13 @@ $(eval $(TARGET_ARGS):;@:)
 
 run:
 	pdm config python.use_venv true && \
-	pdm install && pdm run -v appening
+	pdm install && pdm run -v appi
 
 install:
 	pdm install
 
 compile: install
-	pdm run pyinstaller --collect-all appening -n {{cookiecutter.project_slug}} --onefile {{cookiecutter.project_slug}}/main.py
+	pdm run pyinstaller --collect-all appi -n {{cookiecutter.project_slug}} --onefile {{cookiecutter.project_slug}}/main.py
 
 run-bin: compile
 	./dist/{{cookiecutter.project_slug}}

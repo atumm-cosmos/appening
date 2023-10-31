@@ -22,6 +22,8 @@ install-deps:
 	pip install -U pdm cookiecutter
 
 run: bake
-	cd appening && \
+	cd appi && \
 	pdm config python.use_venv true && \
 	pdm install -G dev && make run-bin
+
+zorbaELyonany5454%$

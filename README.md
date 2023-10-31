@@ -1,4 +1,4 @@
-# Appening - Your favorite DIY desktop app creator!
+# appi - Your favorite DIY desktop app creator!
 
 [![image](https://github.com/giswqs/pypackage/workflows/build/badge.svg)](https://github.com/giswqs/pypackage/actions?query=workflow%3Abuild)
 [![image](https://github.com/giswqs/pypackage/workflows/docs/badge.svg)](https://giswqs.github.io/pypackage)
@@ -56,7 +56,7 @@ curl -o /tmp/app.png https://example.com/image.png
 
 #### 4. Create the app
 
-cookiecutter gh:atumm-ra/appening
+cookiecutter gh:atumm-ra/appi
 
 You'll be asked to fill in the parameters, most defaults would do, but you need to fill in the following (&examples):
 
@@ -101,7 +101,7 @@ sudo gtk-update-icon-cache /usr/share/icons/hicolor
 Feel free to open a PR with any of the following, if there isn't one already.
 
 - [ ] Support flatpak
-- [ ] host a flatpak repository for all apps created with appening
+- [ ] host a flatpak repository for all apps created with appi
 - [ ] Support Mac OS X
 
 
